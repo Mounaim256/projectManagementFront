@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+:root{
+    --main-color : #08526d;
+    --second-color : #ec1e23;
+}
+
+input:focus,
+button:focus,
+textarea:focus,
+.btn:focus{
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+         -o-box-shadow: none;
+            box-shadow: none;
+            outline: none;
+}

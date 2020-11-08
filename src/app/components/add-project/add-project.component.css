@@ -1,0 +1,126 @@
+/* Start add Project section */
+
+.overlay{
+    background-color:rgba(0,0,0,0.6);
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    z-index: 1040;
+}
+
+.modal .modal-dialog {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+}
+
+@media (min-width: 576px){
+    .modal .modal-dialog {
+        margin: 0;
+    }
+}
+.modal .modal-content > span{
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    background-color: var(--second-color);
+    opacity: 1;
+    color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 46px;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    z-index: 1;
+}
+
+.modal .modal-header {
+    background: var(--second-color);
+    border-bottom-color: var(--second-color);
+    align-items: center;
+}
+
+.modal .modal-header .modal-title,
+.modal .modal-header .close{
+    color: #fff;
+}
+
+.modal .modal-header .close{
+    opacity: 1;
+}
+
+.modal .modal-header .close:hover{
+    opacity: .5;
+}
+
+.modal .modal-body {
+    padding: 2rem;
+}
+
+.modal .input-lable {
+    display: flex;
+    flex-direction: column-reverse
+}
+
+.modal .input-lable label {
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.modal .input-lable input:focus,
+.modal .input-lable textarea:focus{
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+         -o-box-shadow: none;
+            box-shadow: none;
+    border : 1px solid var(--main-color)
+}
+
+.modal .input-lable input.was-invalid {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+  }
+
+.modal .input-lable input:focus +label,
+.modal .input-lable textarea:focus +label{
+    color: var(--main-color)
+}
+
+.modal .button-box {
+    display: flex;
+    justify-content: flex-end
+}
+
+.modal .button-box button {
+    padding: 2px 8px;
+    text-transform: uppercase;
+    border: 1px solid var(--second-color);
+    background-color: var(--second-color);
+    border-radius: 5%;
+    color: #fff
+}
+
+.modal .button-box button:disabled {
+    opacity: .5;
+}
+
+.modal .button-box  button:first-child{
+    margin-right: 5px;
+    background-color: transparent;
+    color: var(--second-color)
+}
+
+.modal .button-box button:first-child:hover{
+    background-color: var(--second-color);
+	color: #fff
+}
+
+  /* End add Project section */

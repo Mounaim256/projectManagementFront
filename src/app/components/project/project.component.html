@@ -1,0 +1,24 @@
+<!-- Start projects section  -->
+<div class="projects">
+    <div class="container">
+        <button class="ml-auto" (click)="addProject()">Add project</button>
+        <div class="row">
+            <div class="col-lg-4" *ngFor="let project of projects">
+                <div class="card">
+                    <div class="card-body">
+                        <button class="btn btn-sm button" (click)="deleteProject(project.id)"></button>
+                        <h4 class="card-title">{{project.name}}</h4>
+                        <p class="card-text">{{project.startDate}}</p>
+                        <div class="button-box">
+                            <button (click)="updateProject(project)">Update</button>
+                            <button>Open</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div #componentModal></div>
+<!-- End projects section  -->

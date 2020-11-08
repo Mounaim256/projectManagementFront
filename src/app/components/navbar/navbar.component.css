@@ -1,0 +1,43 @@
+/* start navbar */
+nav{
+    transition:  .6s ease-in-out
+}
+
+.navbar-light .navbar-brand{
+    font-size: 1.8rem;
+    color: var(--main-color);
+	font-weight : 600;
+	padding-top : 0
+
+}
+
+.navbar-light .navbar-brand:hover{
+    color: var(--main-color)
+}
+.navbar-light .navbar-brand span{
+    color: var(--second-color);
+	font-weight : 300
+}
+
+.btn-aside{
+	border: 1px solid var(--main-color);
+}
+
+
+.navbar-nav .nav-link{
+	margin-left : 15px;
+	color : var(--main-color) !important;
+	text-transform : uppercase;
+	font-weight : 600
+} 
+
+.navbar-bgcolor{
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.125);
+
+}
+
+.navbar-bgcolor .nav-link{
+	color : var(--main-color) !important;
+}
+/* End navbar */

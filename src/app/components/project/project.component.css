@@ -1,0 +1,72 @@
+/* Start projects section */
+.projects{
+	padding: 50px 0 30px;
+    background-color: #fff
+}
+
+.projects .card{
+	margin-bottom: 20px
+}
+
+.projects .card h4{
+	color: var(--main-color)
+}
+
+.projects .card .button{
+	background-color: var(--second-color);
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.projects .card .button::after{
+	content: "\f55a";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.projects button {
+    background-color: transparent;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    border: 1px solid var(--second-color);
+    border-radius: 5%
+}
+
+.projects .container > button {
+    display: flex;
+    margin-bottom: 20px;
+    color:  #fff;
+    background-color: var(--second-color)
+}
+
+.projects .container > button:hover {
+    background-color: #fff;
+	color: var(--second-color)
+}
+
+.projects .button-box {
+    display: flex;
+    justify-content: flex-end
+}
+
+.projects .button-box  button {
+    color: var(--second-color)
+}
+
+.projects .button-box  button:first-child{
+    margin-right: 5px
+}
+
+.projects .button-box button:hover{
+    background-color: var(--second-color);
+	color: #fff
+}
+
+.display{
+    display: block;
+}
+
+/* End projects section */

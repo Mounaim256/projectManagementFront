@@ -1,0 +1,14 @@
+/* Start home section */
+.home{
+    margin-left: 20%;
+    margin-top: 55px;
+    padding: 5px 10px;
+    height: auto;
+    max-height: 100%;
+    transition:  .5s ease-in-out;
+}
+
+.home.fullwidth{
+    margin-left: 0;
+}
+/* End home section */

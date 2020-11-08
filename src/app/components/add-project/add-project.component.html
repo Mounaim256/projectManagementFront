@@ -1,0 +1,79 @@
+<!-- Start addProject section -->
+<!-- Start overlay Section -->
+<div class="overlay" [ngStyle]="{'display':display}"></div>
+<!-- End overlay Section -->
+<div class="modal" role="dialog" [ngStyle]="{'display':display}">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" [ngClass]="{'d-none':isCreated}">Update Project</h5>
+                <h5 class="modal-title" [ngClass]="{'d-none':!isCreated}">Add Project</h5>
+                <button type="button" class="close" (click)="onCloseModal()">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="" [formGroup]="formContent" (ngSubmit)="formSubmit(formContent)" class="form">
+                    <!-- Start Name field -->
+                    <div class="mb-2">
+                        <div class="input-lable">
+                            <input type="text" class="form-control form-control-sm" [ngClass]="{'was-invalid':formContent.controls['name'].touched && formContent.controls['name'].errors?.required}" formControlName="name">
+                            <label>Name</label>
+                        </div>
+                        <div class="invalid-feedback d-block" *ngIf="formContent.controls['name'].touched && formContent.controls['name'].errors?.required">
+                            Valid  name is required.
+                        </div>
+                    </div>
+                    <!-- End Name field -->
+                    <!-- Start Description field -->
+                    <div class="mb-2">
+                        <div class="input-lable">
+                            <textarea class="form-control" formControlName="description" rows="6"></textarea>
+                            <label>Description</label>
+                        </div>
+                    </div>
+                    <!-- End Description field -->
+                    <!-- Start Prefix field -->
+                    <div class="mb-2">
+                        <div class="input-lable">
+                            <input type="text" class="form-control form-control-sm" formControlName="prefix" >
+                            <label>Prefix</label>
+                        </div>
+                        <div class="invalid-feedback d-block" *ngIf="formContent.controls['prefix'].touched && formContent.controls['prefix'].errors?.required">
+                            Valid  prefix is required.
+                        </div>
+                    </div>
+                    <!-- End Prefix field -->
+                    <!-- Start Start Date field -->
+                    <div class="mb-2">
+                        <div class="input-lable">
+                            <input type="datetime-local" class="form-control form-control-sm" formControlName="startDate">
+                            <label>Start Date</label>
+                        </div>
+                        <div class="invalid-feedback d-block" *ngIf="formContent.controls['startDate'].touched && formContent.controls['startDate'].errors?.required">
+                            Valid Date is required.
+                        </div>
+                    </div>
+                    <!-- End Start Date field -->
+                    <!-- Start End Date field -->
+                    <div class="mb-3">
+                        <div class="input-lable">
+                            <input type="datetime-local" class="form-control form-control-sm" formControlName="endDate">
+                            <label>End Date</label>
+                        </div>
+                    </div>
+                    <!-- End End Date field -->
+                <!-- Start Submit button -->
+                <div class="button-box mt-5">
+                    <button  type="button" (click)="onCloseModal()">Cancel</button>
+                    <button  type="submit" [disabled]="formContent.invalid" [ngClass]="{'d-none':isCreated}">Update</button>
+                    <button  type="submit" [disabled]="formContent.invalid" [ngClass]="{'d-none':!isCreated}">Add</button>
+                </div>
+                
+                <!-- End Submit button -->
+            </form>
+            </div>
+        </div>    
+    </div>
+</div>
+<!-- End addProject section -->

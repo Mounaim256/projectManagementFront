@@ -1,0 +1,5 @@
+<app-navbar (openSBar)="openSideBar($event)"></app-navbar>
+<app-sidebar [isOpenSideBar]="isOpenSB"></app-sidebar>
+<div class="home" [ngClass]="{'fullwidth':!isOpenSB}">
+    <router-outlet></router-outlet>
+</div>

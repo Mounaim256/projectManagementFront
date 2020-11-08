@@ -1,0 +1,82 @@
+.aside {
+    width: 20%;
+    background-color: #27374a;
+    position: fixed;
+    top: 55px;
+    left: -20%;
+    height: 100%;
+    color: white;
+    padding-top: 50px;
+    min-height: 100%;
+    transition:  .5s ease-in-out;
+}
+
+.aside.open {
+    left: 0;
+}
+
+.aside button{
+    position: absolute;
+    top: 20px;
+    right: -27px;
+    background-color: #27374a;
+    color: #fff;
+    padding: 10px;
+    border: none;
+}
+
+.aside button::after{
+    content: "\f55a";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.aside .aside-content ul,
+.aside .aside-content li {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    line-height: 35px;
+    cursor: pointer;
+}
+.aside .aside-content li:not(collapsed) .arrow:before {
+    content: "\f078";
+    font-family: "Font Awesome 5 Free";
+    margin-right: 5px;
+    font-weight: 900;
+    float: right;
+}
+
+.aside .aside-content > li {
+    border-left: 3px solid var(--second-color);
+    background-color: #4f5b69;
+    padding-left: 5px;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+}
+
+.aside .aside-content li a {
+    text-decoration: none;
+    color: #e1ffff;
+}
+
+.aside .aside-content  ul li{
+    background-color: #181c20;
+    line-height: 28px;
+    border-bottom: 1px solid #23282e;
+    text-transform: capitalize;
+}
+
+.aside .aside-content ul li:hover{
+    background-color: #020203;
+}
+
+.aside .aside-content ul li:before{
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    padding-left: 20px;
+    padding-right: 10px;
+    vertical-align: middle;
+    color: var(--second-color);
+}
