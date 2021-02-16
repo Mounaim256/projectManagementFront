@@ -4,8 +4,8 @@
             <a><i class='{{"fa fa-lg " + fontNames[id]}}'></i> {{name}} <span class="arrow"></span></a>
         </li>
         <ul class="sub-menu collapse" id="products" [ngClass]="{'show':isOpen[id],'in':isOpen[id]}">
-            <li><a routerLink='{{"/projects/add"+name}}'>{{"Add " + name}}</a></li>
-            <li><a routerLink='{{"/"+name+"s"}}'>{{name + " Managment"}}</a></li>
+            <li><a routerLink=''>{{"Add " + name}}</a></li>
+            <li><a routerLink=''>{{name + " Managment"}}</a></li>
         </ul>
     </div>
 </aside>
